@@ -48,10 +48,10 @@ export class LoginComponent implements OnInit {
   private initFormControls(): void {
     this.form = this.fb.group({
       email: [
-        "danyllo.chupetinha@gmail.com",
+        "marcio.henrique@joggadigital.com.br",
         [Validators.required, this.customValidators.emailFormat]
       ],
-      password: ["", [Validators.required]]
+      password: ["s6g4sdfg5", [Validators.required]]
     });
   }
 

@@ -16,9 +16,16 @@ import { HandlerErrorHelpers } from "../handler-error/handler-error.helper";
   providedIn: "root"
 })
 export class TokenInterceptor implements HttpInterceptor {
-  constructor(public auth: AuthService, private handler: HandlerErrorHelpers) {}
+  protected handlerErrorHelper;
 
-  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+  constructor(public auth: AuthService, private handler: HandlerErrorHelpers) {
+    this.handlerErrorHelper = handler;
+  }
+
+  intercept(
+    request: HttpRequest<any>,
+    next: HttpHandler
+  ): Observable<HttpEvent<any>> {
     request = request.clone({
       setHeaders: {
         Authorization: `Bearer ${this.auth.getToken()}`
@@ -31,13 +38,13 @@ export class TokenInterceptor implements HttpInterceptor {
         (event: HttpEvent<any>) => {
           if (event instanceof HttpResponse) {
             if (event.body.error) {
-              this.handler.handle(event);
+              this.handlerErrorHelper.handle(event);
             }
           }
         },
         (error: any) => {
           if (error instanceof HttpErrorResponse) {
-            this.handler.handle(error);
+            this.handlerErrorHelper.handle(error);
           }
         }
       )

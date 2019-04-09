@@ -132,7 +132,7 @@ export const cleanUp = (value: string) => {
 
 
 export const getDataUser = (): any => {
-    return getObjectCookie('jogga_hub_auth_user_data');
+    return getObjectCookie('user_data');
 };
 
 

@@ -30,7 +30,7 @@ import { ClientLayoutComponent } from "./modules/client/layouts/client.layout.co
     AppRoutingModule,
     RouterModule,
     SharedModule,
-    NotifierModule.withConfig(notifierDefaultOptions),
+    NotifierModule.withConfig(notifierDefaultOptions)
   ],
   declarations: [
     AppComponent,
