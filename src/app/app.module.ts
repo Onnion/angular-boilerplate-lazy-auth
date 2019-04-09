@@ -19,6 +19,9 @@ import { SharedModule } from "./modules/shared/shared.module";
 import { AuthLayoutComponent } from "./modules/auth/layouts/auth.layout.component";
 import { InternLayoutComponent } from "./modules/intern/layouts/intern.layout.component";
 import { ClientLayoutComponent } from "./modules/client/layouts/client.layout.component";
+import { ModalDirective } from "./helpers/directives/modal/modal.directive";
+import { CpfPipe } from "./pipes/cpf.pipe";
+import { CurrencyBrlPipe } from "./pipes/currency-brl.pipe";
 
 @NgModule({
   imports: [
@@ -36,7 +39,10 @@ import { ClientLayoutComponent } from "./modules/client/layouts/client.layout.co
     AppComponent,
     AuthLayoutComponent,
     InternLayoutComponent,
-    ClientLayoutComponent
+    ClientLayoutComponent,
+    ModalDirective,
+    CpfPipe,
+    CurrencyBrlPipe
   ],
   providers: [
     FormBuilderValidators,
