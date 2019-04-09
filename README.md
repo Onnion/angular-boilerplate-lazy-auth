@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Onnion/angular-boilerplate-lazy-auth.svg?branch=master)](https://travis-ci.org/Onnion/Desafio-Frontend-Accenture-Recife)
+[![Build Status](https://travis-ci.org/Onnion/angular-boilerplate-lazy-auth.svg?branch=master)](https://travis-ci.org/Onnion/angular-boilerplate-lazy-auth)
 
 
 # angular-boilerplate-lazy-auth
