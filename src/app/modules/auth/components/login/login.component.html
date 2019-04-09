@@ -1,0 +1,53 @@
+<div class="container-fluid container-full">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-md-5 col-sm-12">
+        <div class="card m-0">
+          <app-loading [loading]="status.loading"></app-loading>
+
+          <div class="row">
+            <div class="col">
+              <img src="" alt="" class="img-fluid" />
+            </div>
+          </div>
+          <!--<p class="tip">Or Be Classical</p>-->
+          <form [formGroup]="form" (submit)="submit()" (keyup.enter)="submit()">
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input
+                type="email"
+                matInput
+                placeholder="Email"
+                formControlName="email"
+              />
+              <mat-icon matSuffix>email</mat-icon>
+              <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Senha</mat-label>
+              <input
+                type="password"
+                matInput
+                placeholder="Senha"
+                formControlName="password"
+              />
+              <mat-icon matSuffix>lock_outline</mat-icon>
+              <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+
+            <div class="card-footer">
+              <button
+                [disabled]="status.loading"
+                class="btn btn-block btn-success"
+                type="submit"
+              >
+                {{ btn_title }}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

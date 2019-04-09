@@ -1,0 +1,30 @@
+language: node_js
+
+sudo: false
+
+node_js:
+  - "9"
+
+branches:
+  only:
+    - master
+
+cache:
+  directories:
+    - node_modules
+  
+addons:
+  chrome: stable
+
+notifications:
+  email:
+    recipients:
+      - marcio.hsdl@gmail.com
+    on_success: always
+    on_failure: always
+
+before_script:
+  - npm install -g @angular/cli
+
+script:
+  - ng build --prod
