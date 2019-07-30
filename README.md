@@ -1,3 +1,5 @@
+<a href="https://codeclimate.com/github/Onnion/angular-boilerplate-lazy-auth/maintainability"><img src="https://api.codeclimate.com/v1/badges/71f09c29ac0e3714fe79/maintainability" /></a>
+
 [![Build Status](https://travis-ci.org/Onnion/angular-boilerplate-lazy-auth.svg?branch=master)](https://travis-ci.org/Onnion/angular-boilerplate-lazy-auth)
 
 
